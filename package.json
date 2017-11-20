@@ -4,7 +4,8 @@
   "description": "A function called *words* that takes in a string argument and counts the occurrences of each word in the string.  The function should return a JSON object showing the words identified, and their occurrences. For example for the input `olly olly in come free`, the output should be **{olly: 2, in: 1, come: 1, free: 1}**",
   "main": "src/words.js",
   "scripts": {
-    "test": "mocha tests/test.js"
+    "build": "babel src -d lib",
+    "test": "mocha require --babel-register tests/test.js"
   },
   "repository": {
     "type": "git",
@@ -12,9 +13,8 @@
   },
   "keywords": [
     "TDD",
-    "Javascript\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[3~\u001b[C\u001b[C\u001b[C\u001b[D\u001b[\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
-    "\"Self-Learning",
-    "Clinic\""
+    "Javascript",
+    "Self-Learning Clinic"
   ],
   "author": "Tovieye Moses",
   "license": "ISC",
@@ -28,7 +28,9 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-airbnb": "^2.4.0",
+    "babel-register": "^6.26.0",
     "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
