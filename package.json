@@ -5,7 +5,7 @@
   "main": "src/words.js",
   "scripts": {
     "build": "babel src -d lib",
-    "test": "mocha require --babel-register tests/test.js"
+    "test": "mocha --require babel-polyfill --require babel-register tests/test.js"
   },
   "repository": {
     "type": "git",

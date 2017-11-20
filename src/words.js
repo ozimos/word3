@@ -1,1 +1,1 @@
-export default function words(str) {}
+export default function (str) {}
