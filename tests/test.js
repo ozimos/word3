@@ -6,6 +6,9 @@ const {
 
 describe('words', () => {
   it('returns an object', () => {
-    assert.isObject(words('A sentence'));
+    assert.deepEqual(words('A sentence'), {
+      A: 1,
+      sentence: 1
+    });
   });
 });
